@@ -37,4 +37,8 @@ INT 21H
 CODE ENDS
 END
 ```
-## Output Table   
+## Output Table
+
+| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+|--------------------------|---------------------------|
+| 1200H  01  12           |                           | 
