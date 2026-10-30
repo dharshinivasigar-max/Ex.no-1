@@ -23,21 +23,17 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 CODE SEGMENT
 ASSUME CS:CODE, DS:CODE
 ORG 1000H
-
 MOV CL,00H
 MOV AX,1234H
 MOV BX,1234H
 ADD AX,BX
 JNC L1
 INC CL
-
-L1: MOV SI,1200H
+L1:MOV SI,1200H
 MOV [SI],AX
 MOV [SI+2],CL
-
 MOV AH,4CH
 INT 21H
-
 CODE ENDS
 END
 ```
