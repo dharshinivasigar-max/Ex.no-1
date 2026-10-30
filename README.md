@@ -17,21 +17,26 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 ## FLOWCHART
 <img width="707" height="1024" alt="image" src="https://github.com/user-attachments/assets/e780b4ac-e379-4d29-94d6-1cb447053778" />
 ## Program
+
 ```asm
 CODE SEGMENT
 ASSUME CS:CODE, DS:CODE
 ORG 1000H
+
 MOV CL,00H
 MOV AX,1234H
 MOV BX,1234H
 ADD AX,BX
 JNC L1
 INC CL
-L1:MOV SI,1200H
+
+L1: MOV SI,1200H
 MOV [SI],AX
 MOV [SI+2],CL
+
 MOV AH,4CH
 INT 21H
+
 CODE ENDS
 END
 ```
