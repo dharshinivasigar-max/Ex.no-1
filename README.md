@@ -41,4 +41,45 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 |--------------------------|---------------------------|
-| 1200H  01  12           |                           | 
+| 1200H  01  12           |                           |
+
+##OUTPUT IMAGE FROM MASM SOFTWARE
+##2.SUBTRACTION
+Algorithm
+1.Initialize memory and store 1st data.
+2.Increment to get 2nd data.
+3.Move 2nd data to accumulator.
+4.Subtract memory content.
+5.Store result.
+
+<img width="578" height="797" alt="image" src="https://github.com/user-attachments/assets/15f06026-338b-42bc-883c-85bd2f8bf126" />
+
+##program
+```asm
+CODE SEGMENT
+ASSUME CS: CODE, DS: CODE
+ORG 1000H
+MOV SI,2000H
+MOV CL,00H
+MOV AX,[SI]
+MOV BX,[SI+02H]
+SUB AX,BX
+JNC L1
+INC CL
+L1:
+MOV [SI+04H],AX
+MOV [SI+06H],CL
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END
+```
+#### Output Table
+
+| **MEMORY LOCATION (INPUT)** | **MEMORY LOCATION (OUTPUT)** |
+| --------------------------- | ---------------------------- |
+|                             |                              |
+
+#### Manual Calculations
+
+(Add your calculation here)
