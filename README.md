@@ -1,10 +1,10 @@
-##Arithmetic-operation-using-8086
-##8086 Assembly Language Programs for Arithmetic Operations
-##AIM
+## Arithmetic-operation-using-8086
+## 8086 Assembly Language Programs for Arithmetic Operations
+## AIM
 To write and execute Assembly Language Programs to perform arithmetic operations for the 8086 microprocessor.
-##APPARATUS REQUIRED
+## APPARATUS REQUIRED
 - Personal Computer with MASM Software
-##ADDITION
+## ADDITION
 **Algorithm**
  1. Initialize memory location in HL register.
  2. Store 1st data.
@@ -14,9 +14,9 @@ To write and execute Assembly Language Programs to perform arithmetic operations
  6. Add value in memory with accumulator.
  7. Store result.
  8. Stop.
-##FLOWCHART
+## FLOWCHART
 <img width="707" height="1024" alt="image" src="https://github.com/user-attachments/assets/e780b4ac-e379-4d29-94d6-1cb447053778" />
-##Program
+## Program
 ```
 CODE SEGMENT
 ASSUME CS:CODE, DS:CODE
@@ -35,4 +35,4 @@ INT 21H
 CODE ENDS
 END
 ```
-##Output Table   
+## Output Table   
