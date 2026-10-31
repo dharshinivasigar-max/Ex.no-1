@@ -126,9 +126,9 @@ END
 ## OUTPUT SCREEN FROM MASM SOFTWARE
 ## 4. DIVISION
 ## Algorithm
-1.Load memory location of operands.
-2.Perform division.
-3.Store result.
+  1.Load memory location of operands.
+  2.Perform division.
+  3.Store result.
 ## FLOWCHART
 <img width="1065" height="802" alt="image" src="https://github.com/user-attachments/assets/25b4a483-0d42-494b-8639-1af3ea17191b" />
 
