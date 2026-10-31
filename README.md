@@ -46,11 +46,11 @@ END
 ## OUTPUT IMAGE FROM MASM SOFTWARE
 ## 2.SUBTRACTION
  **Algorithm**
-1.Initialize memory and store 1st data.
-2.Increment to get 2nd data.
-3.Move 2nd data to accumulator.
-4.Subtract memory content.
-5.Store result.
+  1.Initialize memory and store 1st data.
+  2.Increment to get 2nd data.
+  3.Move 2nd data to accumulator.
+  4.Subtract memory content.
+  5.Store result.
 
 <img width="578" height="797" alt="image" src="https://github.com/user-attachments/assets/15f06026-338b-42bc-883c-85bd2f8bf126" />
 
