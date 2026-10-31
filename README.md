@@ -43,9 +43,9 @@ END
 |--------------------------|---------------------------|
 | 1200H  01  12           |                           |
 
-##OUTPUT IMAGE FROM MASM SOFTWARE
-##2.SUBTRACTION
-Algorithm
+## OUTPUT IMAGE FROM MASM SOFTWARE
+## 2.SUBTRACTION
+ **Algorithm**
 1.Initialize memory and store 1st data.
 2.Increment to get 2nd data.
 3.Move 2nd data to accumulator.
