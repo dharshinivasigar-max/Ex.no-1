@@ -86,11 +86,12 @@ END
 
 OUTPUT SCREEN FROM MASM SOFTWARE
 ## 3. MULTIPLICATION
-## Algorithm
-1.Initialize memory and store operands.
-2.Move operands to registers.
-3.Multiply.
-4.Store result.
+
+**Algorithm**
+ 1.Initialize memory and store operands.
+ 2.Move operands to registers.
+ 3.Multiply.
+ 4.Store result.
 
 ## FLOWCHART
 <img width="569" height="906" alt="image" src="https://github.com/user-attachments/assets/88be88ff-2896-4a88-b73d-84ccffd2fcf9" />
@@ -125,7 +126,7 @@ END
 ---
 ## OUTPUT SCREEN FROM MASM SOFTWARE
 ## 4. DIVISION
-## Algorithm
+**Algorithm**
   1.Load memory location of operands.
   2.Perform division.
   3.Store result.
