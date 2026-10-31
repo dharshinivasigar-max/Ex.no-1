@@ -45,7 +45,7 @@ END
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
 ## 2.SUBTRACTION
- **Algorithm**
+**Algorithm**
   1.Initialize memory and store 1st data.
   2.Increment to get 2nd data.
   3.Move 2nd data to accumulator.
@@ -86,7 +86,6 @@ END
 
 OUTPUT SCREEN FROM MASM SOFTWARE
 ## 3. MULTIPLICATION
-
 **Algorithm**
  1.Initialize memory and store operands.
  2.Move operands to registers.
@@ -127,11 +126,8 @@ END
 ## OUTPUT SCREEN FROM MASM SOFTWARE
 ## 4. DIVISION
 **Algorithm**
-
   1.Load memory location of operands.
-  
-  2.Perform division.
-   
+  2.Perform division.   
   3.Store result.
 ## FLOWCHART
 <img width="1065" height="802" alt="image" src="https://github.com/user-attachments/assets/25b4a483-0d42-494b-8639-1af3ea17191b" />
