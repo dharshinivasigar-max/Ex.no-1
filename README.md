@@ -54,7 +54,7 @@ Algorithm
 
 <img width="578" height="797" alt="image" src="https://github.com/user-attachments/assets/15f06026-338b-42bc-883c-85bd2f8bf126" />
 
-##program
+## Program
 ```asm
 CODE SEGMENT
 ASSUME CS: CODE, DS: CODE
@@ -83,3 +83,90 @@ END
 #### Manual Calculations
 
 (Add your calculation here)
+
+OUTPUT SCREEN FROM MASM SOFTWARE
+## 3. MULTIPLICATION
+## Algorithm
+1.Initialize memory and store operands.
+2.Move operands to registers.
+3.Multiply.
+4.Store result.
+
+## FLOWCHART
+<img width="569" height="906" alt="image" src="https://github.com/user-attachments/assets/88be88ff-2896-4a88-b73d-84ccffd2fcf9" />
+
+## Program
+```asm
+CODE SEGMENT
+ASSUME CS: CODE, DS: CODE
+ORG 1000H
+MOV SI,2000H
+MOV DX,0000H
+MOV AX,[SI]
+MOV BX,[SI+02H]
+MUL BX
+MOV [SI+04H],AX
+MOV [SI+06H],DX
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END
+```
+### Output Table
+
+| **MEMORY LOCATION (INPUT)** | **MEMORY LOCATION (OUTPUT)** |
+|:----------------------------:|:-----------------------------:|
+|                              |                               |
+|                              |                               |
+|                              |                               |
+
+### Manual Calculations
+(Add your calculation here)
+---
+## OUTPUT SCREEN FROM MASM SOFTWARE
+## 4. DIVISION
+## Algorithm
+1.Load memory location of operands.
+2.Perform division.
+3.Store result.
+## FLOWCHART
+<img width="1065" height="802" alt="image" src="https://github.com/user-attachments/assets/25b4a483-0d42-494b-8639-1af3ea17191b" />
+
+## Program
+```asm
+CODE SEGMENT
+ASSUME CS: CODE, DS: CODE
+ORG 1000H
+MOV SI,2000H
+MOV DX,0000H
+MOV AX,[SI]
+MOV BX,[SI+02H]
+DIV BX
+MOV [SI+04H],AX
+MOV [SI+06H],DX
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END
+```
+
+### Output Table
+
+| **MEMORY LOCATION (INPUT)** | **MEMORY LOCATION (OUTPUT)** |
+|:---------------------------:|:----------------------------:|
+|                             |                              |
+|                             |                              |
+|                             |                              |
+
+### Manual Calculations
+(Add your calculation here)
+
+---
+
+### OUTPUT FROM MASM SOFTWARE
+
+## RESULT
+
+Thus, the Assembly Language Programs for 8086 to perform arithmetic operations (Addition, Subtraction, Multiplication, and Division) using both direct and indirect methods were successfully written and executed using MASM.
+
+
