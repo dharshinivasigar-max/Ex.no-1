@@ -43,7 +43,14 @@ END
 |--------------------------|---------------------------|
 | 1200H  01  12           |                           |
 
+## Manual calculations
+
+<img width="1535" height="1215" alt="image" src="https://github.com/user-attachments/assets/fa87f5a2-37f7-47fe-99c3-7f50efe3cc46" />
+
 ## OUTPUT IMAGE FROM MASM SOFTWARE
+
+<img width="636" height="431" alt="image" src="https://github.com/user-attachments/assets/10765e58-b820-4cfa-89fc-2a149ec4caa6" />
+
 ## 2.SUBTRACTION
 **Algorithm**
   1.Initialize memory and store 1st data.
@@ -81,10 +88,12 @@ END
 |                             |                              |
 
 #### Manual Calculations
+<img width="1535" height="1215" alt="image" src="https://github.com/user-attachments/assets/ec81ef48-32ce-4c5f-855b-80cfbb4ff758" />
 
-(Add your calculation here)
 
-OUTPUT SCREEN FROM MASM SOFTWARE
+## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="636" height="431" alt="image" src="https://github.com/user-attachments/assets/752825cf-e4d6-4023-8a65-63582fc89df6" />
+
 ## 3. MULTIPLICATION
 **Algorithm**
  1.Initialize memory and store operands.
@@ -121,9 +130,11 @@ END
 |                              |                               |
 
 ### Manual Calculations
-(Add your calculation here)
----
+<img width="1535" height="1304" alt="image" src="https://github.com/user-attachments/assets/3bf5ed08-056d-4270-9bd3-40c7004e56b1" />
+
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="642" height="435" alt="image" src="https://github.com/user-attachments/assets/e4d34710-40da-479a-80f1-57fdf6f49b37" />
+
 ## 4. DIVISION
 **Algorithm**
   1.Load memory location of operands.
@@ -159,13 +170,15 @@ END
 |                             |                              |
 
 ### Manual Calculations
-(Add your calculation here)
 
----
+<img width="1535" height="1094" alt="image" src="https://github.com/user-attachments/assets/15f34063-e143-4bb3-a046-3a0d32850e70" />
 
 ### OUTPUT FROM MASM SOFTWARE
+<img width="635" height="427" alt="image" src="https://github.com/user-attachments/assets/fb099757-da8a-415b-be83-8cb4083341be" />
+
 
 ## RESULT
+Thus, the Assembly Language Programs for 8086 to perform arithmetic operations (Addition, Subtraction, Multiplication, and Division) using both direct and indirect methods were successfully written and executed using MASM.
 
 Thus, the Assembly Language Programs for 8086 to perform arithmetic operations (Addition, Subtraction, Multiplication, and Division) using both direct and indirect methods were successfully written and executed using MASM.
 
