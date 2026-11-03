@@ -23,18 +23,23 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 CODE SEGMENT
 ASSUME CS:CODE, DS:CODE
 ORG 1000H
-MOV CL,00H
-MOV AX,1234H
-MOV BX,1234H
-ADD AX,BX
-JNC L1
-INC CL
-L1:MOV SI,1200H
-MOV [SI],AX
-MOV [SI+2],CL
-MOV AH,4CH
-INT 21H
+START:
+    MOV AX, CODE
+    MOV DS, AX
+    MOV SI, 2000H        ; Point to first number
+    MOV AX, [SI]         ; Load first 16-bit number
+    MOV BX, [SI+02H]     ; Load second 16-bit number
+    MOV CL, 00H          ; Clear carry flag storage
+    ADD AX, BX           ; AX = AX + BX
+    JNC L1               ; Jump if no carry
+    INC CL               ; Store carry = 1
+L1:
+    MOV [SI+04H], AX     ; Store sum
+    MOV [SI+06H], CL     ; Store carry
+    MOV AH, 4CH          ; Exit to DOS
+    INT 21H
 CODE ENDS
+END START
 END
 ```
 ## Output Table
@@ -88,8 +93,7 @@ END
 |                             |                              |
 
 #### Manual Calculations
-<img width="1535" height="1215" alt="image" src="https://github.com/user-attachments/assets/ec81ef48-32ce-4c5f-855b-80cfbb4ff758" />
-
+<img width="790" height="610" alt="WhatsApp Image 2026-11-03 at 2 00 23 PM" src="https://github.com/user-attachments/assets/14bd87c2-2e42-45ae-98e1-a61c606735d7" />
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
 <img width="636" height="431" alt="image" src="https://github.com/user-attachments/assets/752825cf-e4d6-4023-8a65-63582fc89df6" />
