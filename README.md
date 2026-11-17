@@ -26,17 +26,17 @@ ORG 1000H
 START:
     MOV AX, CODE
     MOV DS, AX
-    MOV SI, 2000H        ; Point to first number
-    MOV AX, [SI]         ; Load first 16-bit number
-    MOV BX, [SI+02H]     ; Load second 16-bit number
-    MOV CL, 00H          ; Clear carry flag storage
-    ADD AX, BX           ; AX = AX + BX
-    JNC L1               ; Jump if no carry
-    INC CL               ; Store carry = 1
+    MOV SI, 2000H        
+    MOV AX, [SI]         
+    MOV BX, [SI+02H]     
+    MOV CL, 00H          
+    ADD AX, BX           
+    JNC L1               
+    INC CL               
 L1:
-    MOV [SI+04H], AX     ; Store sum
-    MOV [SI+06H], CL     ; Store carry
-    MOV AH, 4CH          ; Exit to DOS
+    MOV [SI+04H], AX     
+    MOV [SI+06H], CL     
+    MOV AH, 4CH          
     INT 21H
 CODE ENDS
 END START
@@ -44,17 +44,22 @@ END
 ```
 ## Output Table
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-|--------------------------|---------------------------|
-| 1200H  01  12           |                           |
+| MEMORY LOCATION | INPUT | MEMORY LOCATION | OUTPUT |
+|-----------------|-------|-----------------|--------|
+|  2000           | FF    |      2006       |   01   |
+|  2001           | FF    |      2005       |   FF   |
+|  2002           | FF    |      2004       |   FE   |
+|  2003           | FF    |                 |        |
 
 ## Manual calculations
 
-<img width="1535" height="1215" alt="image" src="https://github.com/user-attachments/assets/fa87f5a2-37f7-47fe-99c3-7f50efe3cc46" />
+<img width="1488" height="961" alt="image" src="https://github.com/user-attachments/assets/0babf9ba-be33-45ac-9ef3-57b9913b1a7d" />
+
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
 
-<img width="636" height="431" alt="image" src="https://github.com/user-attachments/assets/10765e58-b820-4cfa-89fc-2a149ec4caa6" />
+<img width="628" height="265" alt="image" src="https://github.com/user-attachments/assets/11f26184-a1e8-4fb8-8685-3a8d99ca4ec5" />
+
 
 ## 2.SUBTRACTION
 **Algorithm**
@@ -69,34 +74,44 @@ END
 ## Program
 ```asm
 CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
+ASSUME CS:CODE, DS:CODE
 ORG 1000H
-MOV SI,2000H
-MOV CL,00H
-MOV AX,[SI]
-MOV BX,[SI+02H]
-SUB AX,BX
-JNC L1
-INC CL
+START:
+    MOV AX, CODE
+    MOV DS, AX
+    MOV SI, 2000H        
+    MOV AX, [SI]         
+    MOV BX, [SI+02H]     
+    MOV CL, 00H          
+    SUB AX, BX           
+    JNC L1               
+    INC CL               
 L1:
-MOV [SI+04H],AX
-MOV [SI+06H],CL
-MOV AH,4CH
-INT 21H
+    MOV [SI+04H], AX     
+    MOV [SI+06H], CL     
+    MOV AH, 4CH          
+    INT 21H
 CODE ENDS
+END START
 END
 ```
 #### Output Table
 
-| **MEMORY LOCATION (INPUT)** | **MEMORY LOCATION (OUTPUT)** |
-| --------------------------- | ---------------------------- |
-|                             |                              |
+| MEMORY LOCATION | INPUT | MEMORY LOCATION | OUTPUT |
+|-----------------|-------|-----------------|--------|
+|  2000           | 22    |      2005       |   11   |
+|  2001           | 22    |      2004       |   11   |
+|  2002           | 11    |                 |        |
+|  2003           | 11    |                 |        |
 
 #### Manual Calculations
-<img width="790" height="610" alt="WhatsApp Image 2026-11-03 at 2 00 23 PM" src="https://github.com/user-attachments/assets/14bd87c2-2e42-45ae-98e1-a61c606735d7" />
+<img width="1488" height="900" alt="image" src="https://github.com/user-attachments/assets/30f4006d-b833-49c1-b4a2-0c9648481695" />
+
+
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
-<img width="636" height="431" alt="image" src="https://github.com/user-attachments/assets/752825cf-e4d6-4023-8a65-63582fc89df6" />
+
+<img width="648" height="262" alt="image" src="https://github.com/user-attachments/assets/03134288-106b-4dcf-8438-03d4d178b979" />
 
 ## 3. MULTIPLICATION
 **Algorithm**
@@ -111,33 +126,40 @@ END
 ## Program
 ```asm
 CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
+ASSUME CS:CODE, DS:CODE
 ORG 1000H
-MOV SI,2000H
-MOV DX,0000H
-MOV AX,[SI]
-MOV BX,[SI+02H]
-MUL BX
-MOV [SI+04H],AX
-MOV [SI+06H],DX
-MOV AH,4CH
-INT 21H
+START:
+    MOV AX, CODE
+    MOV DS, AX
+    MOV SI,2000H
+    MOV DX,0000H
+    MOV AX,[SI]
+    MOV BX,[SI+02H]
+    MUL BX
+    MOV [SI+04H],AX
+    MOV [SI+06H],DX
+    MOV AH,4CH
+    INT 21H
 CODE ENDS
-END
+END START
 ```
 ### Output Table
 
-| **MEMORY LOCATION (INPUT)** | **MEMORY LOCATION (OUTPUT)** |
-|:----------------------------:|:-----------------------------:|
-|                              |                               |
-|                              |                               |
-|                              |                               |
+| MEMORY LOCATION | INPUT | MEMORY LOCATION | OUTPUT |
+|-----------------|-------|-----------------|--------|
+|  2000           | FF    |      2007       |   12   |
+|  2001           | 44    |      2006       |   98   |
+|  2002           | FF    |      2005       |   76   |
+|  2003           | 44    |      2004       |   01   |
 
 ### Manual Calculations
-<img width="1535" height="1304" alt="image" src="https://github.com/user-attachments/assets/3bf5ed08-056d-4270-9bd3-40c7004e56b1" />
+<img width="1488" height="1027" alt="image" src="https://github.com/user-attachments/assets/22ed9dde-ef75-4d47-aa1f-032cdbdce5e9" />
+
+
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
-<img width="642" height="435" alt="image" src="https://github.com/user-attachments/assets/e4d34710-40da-479a-80f1-57fdf6f49b37" />
+
+<img width="622" height="252" alt="image" src="https://github.com/user-attachments/assets/9977f7d0-9ceb-4c99-b657-03d9294b166b" />
 
 ## 4. DIVISION
 **Algorithm**
@@ -150,35 +172,41 @@ END
 ## Program
 ```asm
 CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
+ASSUME CS:CODE, DS:CODE
 ORG 1000H
-MOV SI,2000H
-MOV DX,0000H
-MOV AX,[SI]
-MOV BX,[SI+02H]
-DIV BX
-MOV [SI+04H],AX
-MOV [SI+06H],DX
-MOV AH,4CH
-INT 21H
+START:
+    MOV AX, CODE
+    MOV DS, AX
+    MOV SI,2000H
+    MOV DX,0000H        
+    MOV AX,[SI]         
+    MOV BX,[SI+02H]     
+    DIV BX              
+    MOV [SI+04H],AX     
+    MOV [SI+06H],DX     
+    INT 3               
 CODE ENDS
-END
+END START
 ```
 
 ### Output Table
 
-| **MEMORY LOCATION (INPUT)** | **MEMORY LOCATION (OUTPUT)** |
-|:---------------------------:|:----------------------------:|
-|                             |                              |
-|                             |                              |
-|                             |                              |
+| MEMORY LOCATION | INPUT | MEMORY LOCATION | OUTPUT |
+|-----------------|-------|-----------------|--------|
+|  2000           | 44    |      2004       |   02   |
+|  2001           | 00    |                 |        |
+|  2002           | 22    |                 |        |
+|  2003           | 00    |                 |        |
 
 ### Manual Calculations
+<img width="1488" height="1080" alt="image" src="https://github.com/user-attachments/assets/2f95ab65-4c90-4ce6-83f6-bc9105633bcb" />
 
-<img width="1535" height="1094" alt="image" src="https://github.com/user-attachments/assets/15f34063-e143-4bb3-a046-3a0d32850e70" />
+
 
 ### OUTPUT FROM MASM SOFTWARE
-<img width="635" height="427" alt="image" src="https://github.com/user-attachments/assets/fb099757-da8a-415b-be83-8cb4083341be" />
+
+<img width="647" height="371" alt="image" src="https://github.com/user-attachments/assets/4e009688-d195-4c6c-b78f-4a5ca8f4a43e" />
+
 
 
 ## RESULT
