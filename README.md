@@ -5,15 +5,16 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 ## APPARATUS REQUIRED
 - Personal Computer with MASM Software
 ## ADDITION
-**Algorithm**
- 1. Initialize memory location in HL register.
- 2. Store 1st data.
- 3. Increment HL to enter 2nd data.
- 4. Move 2nd number to accumulator.
- 5. Decrement HL.
- 6. Add value in memory with accumulator.
- 7. Store result.
- 8. Stop.
+#### Algorithm
+
+1. Initialize memory location in HL register.
+2. Store 1st data.
+3. Increment HL to enter 2nd data.
+4. Move 2nd number to accumulator.
+5. Decrement HL.
+6. Add value in memory with accumulator.
+7. Store result.
+8. Stop.
 ## FLOWCHART
 <img width="707" height="1024" alt="image" src="https://github.com/user-attachments/assets/e780b4ac-e379-4d29-94d6-1cb447053778" />
 
@@ -62,13 +63,13 @@ END
 
 
 ## 2.SUBTRACTION
-**Algorithm**
-  1.Initialize memory and store 1st data.
-  2.Increment to get 2nd data.
-  3.Move 2nd data to accumulator.
-  4.Subtract memory content.
-  5.Store result.
+#### Algorithm
 
+1. Initialize memory and store 1st data.
+2. Increment to get 2nd data.
+3. Move 2nd data to accumulator.
+4. Subtract memory content.
+5. Store result.
 <img width="578" height="797" alt="image" src="https://github.com/user-attachments/assets/15f06026-338b-42bc-883c-85bd2f8bf126" />
 
 ## Program
@@ -114,11 +115,12 @@ END
 <img width="648" height="262" alt="image" src="https://github.com/user-attachments/assets/03134288-106b-4dcf-8438-03d4d178b979" />
 
 ## 3. MULTIPLICATION
-**Algorithm**
- 1.Initialize memory and store operands.
- 2.Move operands to registers.
- 3.Multiply.
- 4.Store result.
+#### Algorithm
+
+1. Initialize memory and store operands.
+2. Move operands to registers.
+3. Multiply.
+4. Store result.
 
 ## FLOWCHART
 <img width="569" height="906" alt="image" src="https://github.com/user-attachments/assets/88be88ff-2896-4a88-b73d-84ccffd2fcf9" />
@@ -162,10 +164,11 @@ END START
 <img width="622" height="252" alt="image" src="https://github.com/user-attachments/assets/9977f7d0-9ceb-4c99-b657-03d9294b166b" />
 
 ## 4. DIVISION
-**Algorithm**
-  1.Load memory location of operands.
-  2.Perform division.   
-  3.Store result.
+#### Algorithm
+
+1. Load memory location of operands.
+2. Perform division.
+3. Store result.
 ## FLOWCHART
 <img width="1065" height="802" alt="image" src="https://github.com/user-attachments/assets/25b4a483-0d42-494b-8639-1af3ea17191b" />
 
